@@ -18,3 +18,8 @@ date = datetime.datetime.today()
 
 print (shiftDate(end, delta).strftime("%B %d, %Y"))
 print (shiftDateBack(datetime.datetime.today(), delta).strftime("%B %d, %Y"))
+
+dateString = shiftDateBack(datetime.datetime.today(), delta).strftime("%B+%d+%Y")
+
+url = 'https://www.google.com/search?q=' + dateString
+webbrowser.open(url)
